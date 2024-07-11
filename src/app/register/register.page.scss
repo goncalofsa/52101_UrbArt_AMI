@@ -1,0 +1,99 @@
+.background-image {
+    --background: none;
+    background-image: url('../../assets/backgrounds/register.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+  }
+  
+  .centered-title {
+    flex: 1;
+    text-align: center;
+    font-size: 3em;
+    color: #FF0081;
+    font-family: 'Anybody', sans-serif;
+    font-weight: 700;
+    margin-top: 50%;
+  }
+  
+  .center-subtitle {
+    flex: 1;
+    text-align: center;
+    font-size: 1.5em;
+    color: #FF0081;
+    font-family: 'Anybody', sans-serif;
+    font-weight: 700;
+  }
+  
+.login-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+  }
+  
+  .error-message {
+    color: var(--ion-color-danger);
+  }
+  
+  .go-to-login {
+    --text-align: right;
+    margin-top: 20px;
+    --color: #FF0081;
+    margin-bottom: 75px;
+  }
+  
+  .submit-btn {
+    margin-top: 40px;
+    --background: #01A7FC;
+    --color: #FF0081;
+    font-family: 'Anybody', sans-serif;
+    font-weight: 700;
+    --border-radius: 10px;
+  }
+  
+  .custom-input {
+    --background: #FF0081;
+    --color: #ffffff;
+    --border-radius: 10px;
+  }
+  
+  .file-upload {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+    margin: 0 auto 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }  
+  
+  .file-upload input[type="file"] {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  .file-upload ion-icon {
+    font-size: 3em;
+    color: #FF0081;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .form {
+    width: 80%;
+  }

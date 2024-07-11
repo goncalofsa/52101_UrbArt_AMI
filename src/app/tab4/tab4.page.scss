@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Anybody:wght@700&display=swap');
+
+.background-image {
+  --background: none;
+  background-image: url('../../assets/backgrounds/profile.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+}
+
+.centered-title {
+  flex: 1;
+  text-align: center;
+  font-size: 3em;
+  color: #FFFF00;
+  font-family: 'Anybody', sans-serif;
+  font-weight: 700;
+  margin-top: 10%;
+}
+
+.profile-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 90%;
+  margin-top: -30px;
+  background-color: transparent;
+  box-shadow: none;
+  border: none;
+}
+
+.profile-photo {
+  width: 230px;
+  height: 230px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 30px;
+}
+
+.text-name {
+  font-size: 1.9em;
+  color: #FF0081;
+  font-family: 'Anybody', sans-serif;
+  font-weight: 700;
+}
+
+.text-details {
+  font-size: 1em;
+  color: #ffffff;
+  font-family: 'Anybody', sans-serif;
+  font-weight: 10;
+}
+
+.submit-btn {
+    width: 300px;
+    height: 50px;
+    margin-top: 20px;
+    --background: #FF0081;
+    --color: #FFFF00;
+    font-family: 'Anybody', sans-serif;
+    font-weight: 700;
+    --border-radius: 10px;
+}
+
+.profile-details {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-family: 'Anybody', sans-serif;
+    margin-bottom: 20px;
+  }
+  
+  .profile-details .label {
+    font-size: 1em;
+    color: #ffffff;
+    font-weight: 700;
+  }
+  
+  .profile-details .value {
+    font-size: 1em;
+    color: #ffffff;
+    font-weight: 10;
+    text-align: right;
+  }

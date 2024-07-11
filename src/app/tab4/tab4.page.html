@@ -1,0 +1,20 @@
+<ion-content *ngIf="userProfile$ | async as userProfile" padding class="background-image">
+  <h1 class="centered-title">UrbArt</h1>
+  <ion-card class="profile-card">
+    <img [src]="userProfile.photoUrl" alt="User Photo" class="profile-photo" *ngIf="userProfile.photoUrl"/>
+    <ion-card-header>
+      <ion-card-title class="text-name">{{ userProfile.name }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <div class="profile-details">
+        <span class="label">E-mail:</span>
+        <span class="value">{{ userProfile.email }}</span>
+      </div>
+      <div class="profile-details">
+        <span class="label">Origem:</span>
+        <span class="value">{{ userProfile.origin }}</span>
+      </div>
+      <ion-button class="submit-btn" (click)="logout()">TERMINAR SESSÃO</ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

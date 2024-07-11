@@ -1,0 +1,16 @@
+<ion-content padding class="background-image">
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col size="6" *ngFor="let favorite of favorites$ | async" (click)="reopenFavorites(favorite)">
+          <div class="thumbnail-background" [style.background-image]="'url(' + favorite.photoUrls[0] + ')'">
+            <ion-label class="thumbnail-text">
+              <h2>{{ favorite.title }}</h2>
+              <h3>{{ favorite.userName }}</h3>
+            </ion-label>
+          </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <div class="bottom-space">
+  </div>
+</ion-content>

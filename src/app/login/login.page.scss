@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Anybody:wght@700&display=swap');
+
+.background-image {
+    --background: none;
+  background-image: url('../../assets/backgrounds/login.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+}
+
+.centered-title {
+  flex: 1;
+  text-align: center;
+  font-size: 3em;
+  color: #FF0081;
+  font-family: 'Anybody', sans-serif;
+  font-weight: 700;
+  margin-top: 40%;
+}
+
+.left-subtitle {
+    flex: 1;
+    text-align: left;
+    font-size: 1.5em;
+    color: #FF0081;
+    font-family: 'Anybody', sans-serif;
+    font-weight: 700;
+  }
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 75%;
+}
+
+.error-message {
+  color: var(--ion-color-danger);
+}
+
+.go-to-register {
+  --text-align: right;
+  margin-top: 20px;
+  --color: #FF0081 !important;
+}
+
+.submit-btn {
+  margin-top: 40px;
+  --background: #FFFF00;
+  --color: #FF0081;
+  font-family: 'Anybody', sans-serif;
+  font-weight: 700;
+  --border-radius: 10px;
+}
+
+.custom-input {
+  --background: #FF0081;
+  --color: #ffffff;
+  --border-radius: 10px;
+}
+
+.text-regular {
+  color: #ffffff;
+}
+
+.form {
+  width: 80%;
+  margin-top: 30%;
+}

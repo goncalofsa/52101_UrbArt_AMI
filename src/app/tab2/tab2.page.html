@@ -1,0 +1,29 @@
+<ion-content padding class="background-image">
+  <h1 class="centered-title"> </h1>
+  <form [formGroup]="postForm" (ngSubmit)="submitPost()">
+    <ion-card class="profile-card">
+      <ion-card-header>
+        <input type="file" id="fileInput" multiple (change)="onFilesSelected($event)" style="display: none;">
+        <label *ngIf="photos.length === 0" for="fileInput" class="photo-placeholder">
+          <ion-icon name="image-outline"></ion-icon>
+        </label>
+        <div class="post-photos">
+          <div *ngFor="let photo of photos" class="photo-container">
+            <img [src]="getPhotoUrl(photo)" class="photo-preview" />
+          </div>
+        </div>
+      </ion-card-header>
+      <ion-card-content>
+        <div class="post-details">
+          <ion-label class="labels" position="floating">Título:</ion-label>
+          <ion-input class="custom-input" formControlName="title"></ion-input>
+        </div>
+        <div class="post-details">
+          <ion-label class="labels" position="floating">Descrição:</ion-label>
+          <ion-textarea formControlName="description" class="description-textarea"></ion-textarea>
+        </div>
+        <ion-button class="submit-btn" expand="block" type="submit" [disabled]="postForm.invalid || photos.length === 0">PUBLICAR</ion-button>
+      </ion-card-content>
+    </ion-card>
+  </form>
+</ion-content>

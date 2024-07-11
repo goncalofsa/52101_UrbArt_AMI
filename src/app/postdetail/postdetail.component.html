@@ -1,0 +1,44 @@
+<ion-content padding class="background-image">
+  <div class="top-buttons">
+    <ion-button (click)="dismiss()" class="back-button">
+      <ion-icon name="arrow-back"></ion-icon>
+    </ion-button>
+    <ion-button (click)="toggleFavorite()" class="favorite-button">
+      <ion-icon [name]="isFavorite ? 'heart' : 'heart-outline'"></ion-icon>
+    </ion-button>
+  </div>
+
+  <ion-card *ngIf="post" class="post-card">
+    <ion-card-header>
+      <ion-card-title class="post-title">{{ post.title }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+
+      <div class="user-info">
+        <ion-avatar>
+          <ion-img [src]="post.userPhotoUrl" *ngIf="post.userPhotoUrl"></ion-img>
+        </ion-avatar>
+        <div class="user-details">
+          <ion-label class="user-name">{{ post.userName }}</ion-label>
+          <ion-label class="user-origin">{{ post.userOrigin }}</ion-label>
+        </div>
+      </div>
+
+      <div class="photo-navigation">
+        <ion-button (click)="previousPhoto()" [disabled]="currentPhotoIndex === 0">
+          <ion-img src="../../assets/icons/leftarrow.png"></ion-img>
+        </ion-button>
+        <ion-img class="post-image" [src]="post.photoUrls[currentPhotoIndex]" alt="Post Image"></ion-img>
+        <ion-button (click)="nextPhoto()" [disabled]="currentPhotoIndex === post.photoUrls.length - 1">
+          <ion-img src="../../assets/icons/rightarrow.png"></ion-img>
+        </ion-button>
+      </div>
+
+      <p class="title-description">Descrição:</p>
+      <div class="description-container">
+        <p class="post-description">{{ post.description }}</p>
+      </div>
+
+    </ion-card-content>
+  </ion-card>
+</ion-content>

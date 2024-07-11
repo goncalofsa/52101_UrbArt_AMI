@@ -1,0 +1,143 @@
+.background-image {
+  --background: none;
+  background-image: url('../../assets/backgrounds/map.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+}
+
+.top-buttons {
+  position: absolute;
+  top: 16px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 16px;
+  z-index: 1;
+}
+
+.back-button,
+.favorite-button {
+  --ion-background-color: transparent;
+  --background: transparent !important;
+  --color: #01a7fc !important;
+  --border: none;
+  --box-shadow: none;
+  font-size: 1.3em;
+}
+
+ion-card-title.post-title {
+  text-align: center;
+  font-size: 2em;
+  margin-top: 50px;
+  margin-bottom: 16px;
+  color: #ff0081;
+  font-family: 'Anybody', sans-serif;
+  font-weight: 900;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.user-info ion-avatar {
+  margin-right: 8px;
+}
+
+.user-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-name {
+  font-size: 1.3em;
+  color: #ff0081;
+  font-family: 'Anybody', sans-serif;
+  font-weight: 700;
+}
+
+.user-origin {
+  font-size: 1em;
+  color: #ff0081;
+  font-family: 'Anybody', sans-serif;
+  font-weight: 300;
+}
+
+.user-details ion-label {
+  text-align: center;
+}
+
+ion-img.post-image {
+  display: block;
+  max-width: 100%;
+  width: calc(100% - 10px);
+  height: auto;
+  margin: 0 auto 16px;
+  border-radius: 8px;
+}
+
+p.post-description {
+  text-align: left;
+  margin-bottom: 16px;
+}
+
+.post-card {
+  --background: none;
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.title-description {
+  color: #ff0081;
+  font-family: 'Anybody', sans-serif;
+  font-weight: 700;
+  font-size: 1em;
+}
+
+.description-container {
+  position: relative;
+}
+
+.description-container .post-description {
+  position: relative;
+  z-index: 2;
+}
+
+.description-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: white;
+  z-index: 1;
+  border-radius: 8px;
+}
+
+.post-description {
+  padding: 10px;
+}
+
+.photo-navigation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.photo-navigation ion-button {
+  --background: transparent !important;
+  --border: none;
+  --box-shadow: none;
+  font-size: 1.5em;
+  color: #01a7fc;
+}
+
+.photo-navigation ion-button[disabled] {
+  visibility: hidden;
+}
